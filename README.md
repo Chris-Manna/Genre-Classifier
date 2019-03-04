@@ -1,4 +1,4 @@
-# Project3
+# Genre Classifier
 # Using Song Lyrics to Predict Genre and Hit Songs and Identify Distinctive Topics and Keywords for Each Genre
 
 **PART ONE:** Multi-class Classification trying to predict song genre from lyrics
