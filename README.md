@@ -1,24 +1,22 @@
 # Genre Classifier
 # Using Song Lyrics to Predict Genre and Hit Songs and Identify Distinctive Topics and Keywords for Each Genre
-With a partner, I used Machine Learning techniques to predict the genres of 7200 songs, which songs would be hits, and keywords from genres.
+Categorize 7200 songs into 9 categories based only on lyrics.
 
-In Part 1 of this blog, I walk through our EDA. In Part 2 I talk about the multiclass classification techniques used to predict song genres from lyrics. In Part 3, I walk through how we predicted hit songs from those 7200 songs. Finally, we talk about the next steps for how we might improve accuracy scores.
-_____________________________________________
-Part 1: Exploratory Data Analysis, (EDA)
+Exploratory Data Analysis, (EDA)
+Obtaining Data and Initial Overview:
 
-In this process of EDA we first needed to obtain the data, then scrub and clean it, and then we can explore the data.
-Obtaining Data and the initial overview:
+We used two CSV’s that contained songs with lyrics from Kaggle. 
+- One CSV contained 300,000 songs.
+- One CSV contained 12,000 songs.
 
-We used two CSV’s from Kaggle. One CSV contained 300,000 songs. The other CSV contained 12,000 songs and labels for whether or not they have been on a top 100 song list.
+We put the songs into a Pandas DataFrame. 
+- Our features were the song names, band names, genre, the whole song, and whether the song was a hit or not.
 
-We put these values into a pandas DataFrame where our features were the song names, band names, genre, the whole song, and whether the song was a hit or not.
-Scrubbing and Cleaning Data: Grabbing the lyrics from the songs
+Gathering the lyrics from the songs
+- Scrubbing the data took two days. We used Natural Language Processing tools to grab the words from the songs and clean them.
+Tools used: NLTK, REGEX, various tokenization techniques, imported libraries to remove stopwords.
 
-Scrubbing the data took two days. We used Natural Language Processing tools to grab the words from the songs and clean them.
-
-We used NLP tools like regex, we removed stopwords, we tokenized the words.
-
-We did some Feature Engineering to find the root of each word using a process called stemmatizing and lemmatizing on the words.
+We did feature engineering to find the root of each word using a process called stemmatizing and lemmatizing on the words.
 
 After we had cleaned the dataset, we appended each word back to the Pandas DataFrame as their own column. We checked for non-values and dropped songs with non-English words or songs that didn’t contain any lyrics.
 
