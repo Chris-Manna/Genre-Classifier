@@ -13,17 +13,21 @@ We put the songs into a Pandas DataFrame.
 - Our features were the song names, band names, genre, the whole song, and whether the song was a hit or not.
 
 Gathering the lyrics from the songs
-- Scrubbing the data took two days. We used Natural Language Processing tools to grab the words from the songs and clean them.
+- Scrubbing the data took two days.
 Tools used: NLTK, REGEX, various tokenization techniques, imported libraries to remove stopwords.
 
 We did feature engineering to find the root of each word using a process called stemmatizing and lemmatizing on the words.
+https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html
+Stemming usually refers to a crude heuristic process that chops off the ends of words in the hope of achieving this goal correctly most of the time, and often includes the removal of derivational affixes. 
+Lemmatization usually refers to doing things properly with the use of a vocabulary and morphological analysis of words, normally aiming to remove inflectional endings only and to return the base or dictionary form of a word, which is known as the lemma.
 
-After we had cleaned the dataset, we appended each word back to the Pandas DataFrame as their own column. We checked for non-values and dropped songs with non-English words or songs that didn’t contain any lyrics.
+After we cleaned the dataset, we appended each word back to the Pandas DataFrame as their own column. We checked for non-values and dropped songs with non-English words or songs that didn’t contain any lyrics.
 
 At this point, our Pandas Dataframe had 200,000 columns with 30,000 features.
-Exploring Data
+[]()
 
-We chose to select eight genres from all that were listed and decided on the following genres: Rock, Pop, Hip Hop, Metal, Country, Jazz, Electronic, R&B. These genres are the target classes that we are trying to predict for each song.
+We chose to select eight genres: Rock, Pop, Hip Hop, Metal, Country, Jazz, Electronic, R&B. 
+These genres are the target classes that we are trying to predict for each song.
 
 Because the distribution between genres was uneven, we decided to randomly select 900 songs per genre giving us a total number of 900 songs * 8 genres = 7200 songs (rows).
 _____________________________________________
