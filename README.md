@@ -1,23 +1,22 @@
-# Genre Classifier
-# Using Song Lyrics to Predict Genre and Hit Songs and Identify Distinctive Topics and Keywords for Each Genre
-Categorize 7200 songs into 9 categories based only on lyrics.
+# Using Song Lyrics to Predict Musical Genre
+Categorize 7200 songs into 9 categories based only on lyrics with 48% accuracy
 
-Exploratory Data Analysis, (EDA)
-Obtaining Data and Initial Overview:
-
-We used two CSV’s that contained songs with lyrics from Kaggle. 
+### Obtaining Raw Data and Initial Overview:
+Two CSV’s from Kaggle contained lyrics from songs:
 - One CSV contained 300,000 songs.
 - One CSV contained 12,000 songs.
 
-We put the songs into a Pandas DataFrame. 
-- Our features were the song names, band names, genre, the whole song, and whether the song was a hit or not.
+Put the songs into a Pandas DataFrame to see features: 
+- Song names
+- Band names
+- Genre
+- Whole song
 
-Gathering the lyrics from the songs
-- Scrubbing the data took two days.
-Tools used: NLTK, REGEX, various tokenization techniques, imported libraries to remove stopwords.
+### Cleaning and Scrubbing lyrics from songs took two days:
+Tools used: NLTK, remove stopwords, Stemmatizing and Lemmatizing
+(Look up which library used to remove stopwords)
 
 #Feature Engineering
-To find the root of each word use the process called stemmatizing and lemmatizing on the words.
 https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html
 Stemming usually refers to a crude heuristic process that chops off the ends of words in the hope of achieving this goal correctly most of the time, and often includes the removal of derivational affixes. 
 Lemmatization usually refers to doing things properly with the use of a vocabulary and morphological analysis of words, normally aiming to remove inflectional endings only and to return the base or dictionary form of a word, which is known as the lemma.
