@@ -1,5 +1,5 @@
-# Using Song Lyrics to Predict Musical Genre
-Categorize 7200 songs into 9 categories based only on lyrics with 48% accuracy
+# Predict Musical Genre
+Categorize 7200 songs into 9 categories using song lyrics with 48% accuracy. 
 
 ### Obtaining Raw Data and Initial Overview:
 Two CSV’s from Kaggle contained lyrics from songs:
@@ -16,27 +16,29 @@ Put the songs into a Pandas DataFrame to see features:
 Tools used: NLTK, remove stopwords, Stemmatizing and Lemmatizing
 (Look up which library used to remove stopwords)
 
-#Feature Engineering
-https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html
-Stemming usually refers to a crude heuristic process that chops off the ends of words in the hope of achieving this goal correctly most of the time, and often includes the removal of derivational affixes. 
-Lemmatization usually refers to doing things properly with the use of a vocabulary and morphological analysis of words, normally aiming to remove inflectional endings only and to return the base or dictionary form of a word, which is known as the lemma.
-
-After we cleaned the dataset, we appended each word back to the Pandas DataFrame as their own feature. We checked for non-values and dropped songs with non-English words or songs that didn’t contain any lyrics.
+After the dataset was cleaned, each word was appended to the Pandas DataFrame as their own feature. 
+Dropped non-values, songs with non-English characters, and songs that didn’t contain any lyrics.
 
 At this point, our Pandas Dataframe had 200,000 rows with 30,000 features.
 []()
 
-We chose to select eight distinct genres: Rock, Pop, Hip Hop, Metal, Country, Jazz, Electronic, R&B. 
-These genres are the target classes that we are trying to predict for each song.
+Selected eight distinct genres to categorize songs into
+- Rock, Pop, Hip Hop, Metal, Country, Jazz, Electronic, R&B. 
+Target classes that we are predicting for each song.
 
-Because the distribution between genres was uneven, we decided to randomly select 900 songs per genre giving us a total number of 900 songs * 8 genres = 7200 songs (rows).
-_____________________________________________
-Part 2: Multiclass Classification  —  Predicting Genre
+Because the distribution between genres was uneven, we decided to randomly select 900 songs per genre 
+Total number of 900 songs * 8 genres = 7200 songs (rows).
+
+![]()
+
+# Multiclass Classification  —  Predicting Genre
 
 In this section, we use the features and rows we have to connect each input’s relationship to the output.
-Model Optimization: Choosing models
 
-We wanted to see how five basic models, Multinomial Naive Bayes, Random Forest, AdaBoost, Gradient Boost, K-Nearest Neighbors, would work with both stemmatized and lemmatized words compare score results and pick lemmatizing over stemmatizing in our five models for future model optimization. 
+# Model Optimization: Choosing models
+
+How do the five basic models compare without money optimization?
+, Multinomial Naive Bayes, Random Forest, AdaBoost, Gradient Boost, K-Nearest Neighbors, would work with both stemmatized and lemmatized words compare score results and pick lemmatizing over stemmatizing in our five models for future model optimization. 
 The chart below shows our results:
 
 ![](https://github.com/Botafogo1894/Project3/blob/master/basic%205%20models.png)
