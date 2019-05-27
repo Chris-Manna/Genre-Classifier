@@ -2,11 +2,11 @@
 Categorize 7200 songs into 9 categories using song lyrics with 48% accuracy. 
 
 ### Obtaining Raw Data and Initial Overview:
-Two CSV’s from Kaggle contained lyrics from songs:
+##### Two CSV’s from Kaggle contained lyrics from songs:
 - One CSV contained 300,000 songs.
 - One CSV contained 12,000 songs.
 
-Put the songs into a Pandas DataFrame to see features: 
+##### Put the songs into a Pandas DataFrame to see features: 
 - Song names
 - Band names
 - Genre
@@ -16,10 +16,9 @@ Put the songs into a Pandas DataFrame to see features:
 Tools used: NLTK, remove stopwords, Stemmatizing and Lemmatizing
 (Look up which library used to remove stopwords)
 
-After the dataset was cleaned, each word was appended to the Pandas DataFrame as their own feature. 
-Dropped non-values, songs with non-English characters, and songs that didn’t contain any lyrics.
-
-At this point, our Pandas Dataframe had 200,000 rows with 30,000 features.
+- Append words to the Pandas DataFrame as their own feature. 
+- Drop non-values, songs with non-English characters, and songs not containing lyrics.
+- Pandas Dataframe has 200,000 rows with 30,000 features.
 []()
 
 Selected eight distinct genres to categorize songs into
