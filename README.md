@@ -75,7 +75,7 @@ From experimenting with Grid Search and PCA optimizations, we found that Multino
 If you have a lot of features and optimization proves to be computationally expensive, you might opt to pick Naive Bayes. If you have sufficient time and computing power and you want to optimize accuracy score, grid search with Gradient Boost is the way to go.
 Part 3: Binary Classification for predicting hit songs
 
-Modeling: We wanted to predict whether or not a song was on our top song hit list. We repeated the same steps as in the genre classifier model, this time creating Top 100 list of songs as our target. The target column contains a 1 for every song that was a hit and 0 to indicate songs that were not. We ran the same models and yielded the results found below and were able to predict with 96% accuracy which songs were on the top 100 song list.
+# Modeling: We wanted to predict whether or not a song was on our top song hit list. We repeated the same steps as in the genre classifier model, this time creating Top 100 list of songs as our target. The target column contains a 1 for every song that was a hit and 0 to indicate songs that were not. We ran the same models and yielded the results found below and were able to predict with 96% accuracy which songs were on the top 100 song list.
 
 ![](https://github.com/Botafogo1894/Project3/blob/master/basic%205%20for%20binary%20problem.png)
 
@@ -86,6 +86,6 @@ When we used PCA on Gaussian Naive Bayes, the performance was much lower with Mu
 Interpreting and communicating the final results:
 
 All of our models had around 96% score. We decided to try PCA and grid search but the results indicated there was not much room for optimization, so when it comes to binary classification it appeared that we could go with either of the Top 3 performing models and not sacrifice much accuracy.
-Next Steps
 
+# Next Steps
 In the future, to improve model accuracy scores, what I will do is introduce bigrams as new features, include more data about beats from songs, and test out neural networks.
