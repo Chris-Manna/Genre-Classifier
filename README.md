@@ -7,10 +7,7 @@ Categorize 7200 songs into 9 categories using song lyrics with 48% accuracy.
 - One CSV contained 12,000 songs.
 
 ##### Put the songs into a Pandas DataFrame to see features: 
-- Song names
-- Band names
-- Genre
-- Whole song
+- Song names, Band names, Genre, Whole song
 
 ### Cleaning and Scrubbing lyrics from songs took two days:
 Tools used: NLTK, remove stopwords, Stemmatizing and Lemmatizing
@@ -32,12 +29,10 @@ Total number of 900 songs * 8 genres = 7200 songs (rows).
 
 # Multiclass Classification  —  Predicting Genre
 
-In this section, we use the features and rows we have to connect each input’s relationship to the output.
-
-# Model Optimization: Choosing models
+# Choosing Models
 
 How do the five basic models compare without money optimization?
-, Multinomial Naive Bayes, Random Forest, AdaBoost, Gradient Boost, K-Nearest Neighbors, would work with both stemmatized and lemmatized words compare score results and pick lemmatizing over stemmatizing in our five models for future model optimization. 
+Multinomial Naive Bayes, Random Forest, AdaBoost, Gradient Boost, K-Nearest Neighbors, would work with both stemmatized and lemmatized words compare score results and pick lemmatizing over stemmatizing in our five models for future model optimization. 
 The chart below shows our results:
 
 ![](https://github.com/Botafogo1894/Project3/blob/master/basic%205%20models.png)
