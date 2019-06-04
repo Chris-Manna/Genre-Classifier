@@ -10,7 +10,7 @@ Only used songs that contained lyrics and English characters
 ##### Put the songs into a Pandas DataFrame to see features: 
 - Song names, Band names, Genre, Whole song
 
-### Scrubbing lyrics from songs:
+### Scrub lyrics from songs:
 Tools used: NLTK, remove stopwords, Stemmatizing and Lemmatizing
 (Look up which library used to remove stopwords)
 
@@ -19,6 +19,7 @@ Tools used: NLTK, remove stopwords, Stemmatizing and Lemmatizing
 - Pandas Dataframe has 200,000 rows with 30,000 features.
 []()
 
+### Explore Data
 Selected eight distinct genres to categorize songs into
 - Rock, Pop, Hip Hop, Metal, Country, Jazz, Electronic, R&B. 
 Target classes that we are predicting for each song.
@@ -28,9 +29,9 @@ Total number of 900 songs * 8 genres = 7200 songs (rows).
 
 ![]()
 
-# Multiclass Classification  —  Predicting Genre
+### Modeling
 
-### Choosing Models
+##### Multiclass Classification  —  Predicting Genre
 
 How do the five basic models compare without money optimization?
 Multinomial Naive Bayes, Random Forest, AdaBoost, Gradient Boost, K-Nearest Neighbors, would work with both stemmatized and lemmatized words compare score results and pick lemmatizing over stemmatizing in our five models for future model optimization. 
