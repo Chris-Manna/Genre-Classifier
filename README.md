@@ -29,7 +29,7 @@ Total number of 900 songs * 8 genres = 7200 songs (rows).
 
 ![]()
 
-### Modeling
+### Model
 
 ##### Multiclass Classification  —  Predicting Genre
 
