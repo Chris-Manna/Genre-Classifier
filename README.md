@@ -10,7 +10,7 @@ Only used songs that contained lyrics and English characters
 ##### Put the songs into a Pandas DataFrame to see features: 
 - Song names, Band names, Genre, Whole song
 
-### Cleaning and Scrubbing lyrics from songs took two days:
+### Scrubbing lyrics from songs:
 Tools used: NLTK, remove stopwords, Stemmatizing and Lemmatizing
 (Look up which library used to remove stopwords)
 
